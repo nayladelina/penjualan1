@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include __DIR__ . '/../koneksi.php';
 
 if (isset($_POST['simpan'])) {
 

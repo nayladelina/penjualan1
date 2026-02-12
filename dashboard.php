@@ -1,4 +1,7 @@
 <?php
+define('BASEURL', __DIR__);
+include BASEURL . '/koneksi.php';
+
 session_start();
 if (!isset($_SESSION['email'])) {
     header("Location: index.php");
@@ -139,17 +142,17 @@ if (!isset($_SESSION['email'])) {
     } elseif ($page == 'profile') {
     include 'pages/profile.php';
     } elseif ($page == 'customer') {
-        include 'pages/pelanggan.php';
+        include 'pelanggan/pelanggan.php';
     } elseif ($page == 'tambah_pelanggan') {
-        include 'pages/tambah_pelanggan.php';
-    } elseif ($page == 'edit_pelanggan') 
-        include 'pages/edit_pelanggan.php';
+        include 'pelanggan/tambah_pelanggan.php';
+    } elseif ($page == 'edit_pelanggan')
+        include 'pelanggan/edit_pelanggan.php';
     elseif ($page == 'transaksi') {
-        include 'pages/transaksi.php';
+        include 'transaksi/transaksi.php';
     } elseif ($page == 'tambah_transaksi') {
-        include 'pages/tambah_transaksi.php';
+        include 'transaksi/tambah_transaksi.php';
     } elseif ($page == 'edit_transaksi') {
-        include 'pages/edit_transaksi.php';
+        include 'transaksi/edit_transaksi.php';
     }
     
     
