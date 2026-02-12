@@ -118,6 +118,8 @@ if (!isset($_SESSION['email'])) {
         <div class="dropdown-content" id="profileMenu">
             <a href="dashboard.php?page=profile">My Profile</a>
             <a href="logout.php">Logout</a>
+            <a href="dashboard.php?page=transaksi">Transaksi</a>
+
         </div>
     </div>
 </div>
@@ -136,7 +138,23 @@ if (!isset($_SESSION['email'])) {
     include 'pages/hapus.php';
     } elseif ($page == 'profile') {
     include 'pages/profile.php';
-    } else {
+    } elseif ($page == 'customer') {
+        include 'pages/pelanggan.php';
+    } elseif ($page == 'tambah_pelanggan') {
+        include 'pages/tambah_pelanggan.php';
+    } elseif ($page == 'edit_pelanggan') 
+        include 'pages/edit_pelanggan.php';
+    elseif ($page == 'transaksi') {
+        include 'pages/transaksi.php';
+    } elseif ($page == 'tambah_transaksi') {
+        include 'pages/tambah_transaksi.php';
+    } elseif ($page == 'edit_transaksi') {
+        include 'pages/edit_transaksi.php';
+    }
+    
+    
+    
+    {
     echo "<h3>Selamat datang di Dashboard</h3>";
     }
     ?>
